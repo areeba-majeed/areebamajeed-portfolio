@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download CV | Areeba Majeed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-surface-1: #1e293b;
+            --accent-primary: #14b8a6;
+            --accent-primary-hover: #0d9488;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --font-heading: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-secondary);
+            font-family: var(--font-body);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .cv-container {
+            background-color: var(--bg-surface-1);
+            padding: 50px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(248, 250, 252, 0.08);
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: var(--text-primary);
+            font-family: var(--font-heading);
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        p {
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-primary-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(20, 184, 166, 0.4);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 30px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cv-container">
+        <i class="ph ph-file-pdf"
+            style="font-size: 4rem; color: var(--accent-primary); margin-bottom: 20px; display: inline-block;"></i>
+        <h1>Areeba Majeed</h1>
+
+        <!-- Assuming the CV file would be Areeba_Majeed.pdf -->
+        <a href="Areeba_Majeed.pdf" download="Areeba_Majeed.pdf" class="btn-primary">
+            <i class="ph ph-download-simple"></i> Download Resume
+        </a>
+
+        <div>
+            <a href="index.html" class="back-link"><i class="ph ph-arrow-left"></i> Back to Portfolio</a>
+        </div </div>
+</body>
+
+</html>

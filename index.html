@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areeba Majeed | Frontend Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons (Phosphor Icons for a clean, modern look) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">Areeba Majeed/</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="ph ph-list"></i>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-orb orb-1"></div>
+            <div class="hero-orb orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Areeba Majeed</h1>
+                <div class="hero-typewriter">
+                    <span id="typewriter-text"></span><span class="cursor"></span>
+                </div>
+                <p class="hero-tagline">I craft interfaces that are fast, beautiful, and human.</p>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="ph ph-briefcase"></i> View My Work
+                    </a>
+                    <a href="cv.html" class="btn btn-outline">
+                        <i class="ph ph-download-simple"></i> Download CV
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/areeba-majeed/" class="social-link" aria-label="GitHub"><i
+                            class="ph ph-github-logo"></i></a>
+                    <a href="https://www.linkedin.com/in/areeba-majeed-9283aa28a/" class="social-link"
+                        aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="ph ph-arrow-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-up">
+                    <div class="about-avatar">
+                        <i class="ph ph-code"></i>
+                    </div>
+                </div>
+                <div class="about-content fade-up" style="transition-delay: 0.2s">
+                    <div>
+                        <span class="section-subtitle">Get To Know Me</span>
+                        <h2 class="section-title">Who I Am</h2>
+                    </div>
+
+                    <p class="about-bio">
+                        I am a passionate frontend developer who turns ideas into pixel-perfect experiences. My focus
+                        lies in building scalable design systems, optimizing performance, and creating intuitive user
+                        interfaces that solve real problems.
+                    </p>
+
+                    <div class="about-badges">
+                        <div class="badge">
+                            <i class="ph ph-map-pin"></i> Pakistan — Open to Remote
+                        </div>
+                        <div class="badge">
+                            <div class="status-dot"></div> Available for Work
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <a href="cv.html" class="btn btn-primary"><i class="ph ph-file-pdf"></i> Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-subtitle">What I build with</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+            </div>
+
+            <div class="skills-container">
+                <!-- Tech Skills -->
+                <div class="skills-grid">
+                    <div class="skill-card fade-up">
+                        <i class="ph ph-file-html skill-icon"></i>
+                        <div class="skill-name">HTML5</div>
+                        <div class="skill-level">Expert</div>
+                    </div>
+                    <div class="skill-card fade-up" style="transition-delay: 0.1s">
+                        <i class="ph ph-file-css skill-icon"></i>
+                        <div class="skill-name">CSS3</div>
+                        <div class="skill-level">Expert</div>
+                    </div>
+                    <div class="skill-card fade-up" style="transition-delay: 0.2s">
+                        <i class="ph ph-file-js skill-icon"></i>
+                        <div class="skill-name">JavaScript</div>
+                        <div class="skill-level">Proficient</div>
+                    </div>
+                    <div class="skill-card fade-up" style="transition-delay: 0.3s">
+                        <i class="ph ph-atom skill-icon"></i>
+                        <div class="skill-name">React.js</div>
+                        <div class="skill-level">Proficient</div>
+                    </div>
+                    <div class="skill-card fade-up" style="transition-delay: 0.4s">
+                        <i class="ph ph-file-code skill-icon"></i>
+                        <div class="skill-name">Python</div>
+                        <div class="skill-level">Familiar</div>
+                    </div>
+                    <div class="skill-card fade-up" style="transition-delay: 0.5s">
+                        <i class="ph ph-figma-logo skill-icon"></i>
+                        <div class="skill-name">Figma</div>
+                        <div class="skill-level">Proficient</div>
+                    </div>
+                    <div class="skill-card fade-up" style="transition-delay: 0.6s">
+                        <i class="ph ph-terminal-window skill-icon"></i>
+                        <div class="skill-name">C++</div>
+                        <div class="skill-level">Familiar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Dive Soft Skills (Optional requested section) -->
+    <section class="section" style="background-color: var(--bg-surface-1);">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-subtitle">Beyond The Code</span>
+                <h2 class="section-title">Core Strengths</h2>
+            </div>
+
+            <div class="deep-dive-grid">
+                <div class="deep-dive-card fade-up">
+                    <i class="ph ph-scales deep-dive-icon"></i>
+                    <h3 class="deep-dive-title">Decision Making</h3>
+                    <p class="deep-dive-desc">I evaluate tradeoffs quickly and ship with confidence, ensuring projects
+                        move forward without analysis paralysis.</p>
+                </div>
+                <div class="deep-dive-card fade-up" style="transition-delay: 0.2s">
+                    <i class="ph ph-lightbulb deep-dive-icon"></i>
+                    <h3 class="deep-dive-title">Problem Solving</h3>
+                    <p class="deep-dive-desc">I break down complex architectural challenges into manageable, logical
+                        components that are easy to maintain.</p>
+                </div>
+                <div class="deep-dive-card fade-up" style="transition-delay: 0.4s">
+                    <i class="ph ph-users-three deep-dive-icon"></i>
+                    <h3 class="deep-dive-title">Collaboration</h3>
+                    <p class="deep-dive-desc">I bridge the gap between design and engineering, communicating effectively
+                        to deliver a unified product vision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-subtitle">Projects</span>
+                <h2 class="section-title">Featured Works</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card fade-up">
+                    <div class="project-thumb"><i class="ph ph-calendar-check"></i></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Event Manager App</h3>
+                        <p class="project-desc">A responsive event management platform to create, edit, and track
+                            events.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">ReactJS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://managedailytasks.netlify.app/" target="_blank" class="project-link"><i
+                                    class="ph ph-arrow-square-out"></i> Live Demo</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card fade-up" style="transition-delay: 0.1s">
+                    <div class="project-thumb"><i class="ph ph-browsers"></i></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-desc">Designed and built a modern, responsive personal portfolio showcasing
+                            projects and skills.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">ReactJS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://areebamajeed-portfolio.netlify.app/" target="_blank"
+                                class="project-link"><i class="ph ph-arrow-square-out"></i> Live Demo</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Project 4 -->
+                <div class="project-card fade-up" style="transition-delay: 0.3s">
+                    <div class="project-thumb"><i class="ph ph-student"></i></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Student Portal</h3>
+                        <p class="project-desc">A portal for students to register and view details using pure JavaScript
+                            logic.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://manage-studentsrecords.netlify.app/" target="_blank"
+                                class="project-link"><i class="ph ph-arrow-square-out"></i> Live Demo</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card fade-up" style="transition-delay: 0.4s">
+                    <div class="project-thumb"><i class="ph ph-currency-circle-dollar"></i></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Currency Converter</h3>
+                        <p class="project-desc">A real-time currency conversion tool using exchange rate APIs.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">APIs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://coin-convertor.netlify.app" target="_blank" class="project-link"><i
+                                    class="ph ph-arrow-square-out"></i> Live Demo</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Education & Certifications -->
+    <section class="section" style="background-color: var(--bg-surface-1);" id="experience">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-subtitle">Academics</span>
+                <h2 class="section-title">Education & Certifications</h2>
+            </div>
+
+            <div class="edu-grid">
+                <!-- Education -->
+                <div class="edu-card fade-up">
+                    <h3 class="edu-title">BS Computer Science</h3>
+                    <div class="edu-inst">FAST NUCES</div>
+                    <div class="edu-meta">
+                        <span>Present, Expected 2027</span>
+                    </div>
+                </div>
+
+                <div class="edu-card fade-up" style="transition-delay: 0.1s">
+                    <h3 class="edu-title">FSc Engineering</h3>
+                    <div class="edu-inst">Pre-Engineering</div>
+                    <div class="edu-meta">
+                        <span>Completed 2023</span>
+                    </div>
+                </div>
+
+
+                <!-- Certifications -->
+                <div class="edu-card fade-up">
+                    <h3 class="edu-title">Python for Everybody</h3>
+                    <div class="edu-inst">University of Michigan (Coursera)</div>
+                    <div class="edu-meta">
+                        <span>Completed 2025</span>
+                    </div>
+                </div>
+
+                <div class="edu-card fade-up" style="transition-delay: 0.1s">
+                    <h3 class="edu-title">Advanced React</h3>
+                    <div class="edu-inst">Meta (Coursera)</div>
+                    <div class="edu-meta">
+                        <span>Completed 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Let's Build Something Great</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form fade-up">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="john@example.com"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input type="text" name="subject" class="form-control" placeholder="Project Inquiry"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea name="message" class="form-control" placeholder="Hello, I'd like to talk about..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info fade-up" style="transition-delay: 0.2s">
+                    <a href="mailto:areebamajeed212@gmail.com" target="_blank" class="info-card">
+                        <div class="info-icon"><i class="ph ph-envelope-simple"></i></div>
+                        <div class="info-content">
+                            <h5>Email</h5>
+                            <p>areebamajeed212@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/areeba-majeed-9283aa28a/" target="_blank" class="info-card">
+                        <div class="info-icon"><i class="ph ph-linkedin-logo"></i></div>
+                        <div class="info-content">
+                            <h5>LinkedIn</h5>
+                            <p>areeba-majeed</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/areeba-majeed" target="_blank" class="info-card">
+                        <div class="info-icon"><i class="ph ph-github-logo"></i></div>
+                        <div class="info-content">
+                            <h5>GitHub</h5>
+                            <p>areeba-majeed</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Areeba Majeed/</div>
+                <div class="footer-nav">
+
+                    <a href="#about">About</a>
+
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Education</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/areeba-majeed" class="social-link" target="_blank"><i
+                            class="ph ph-github-logo"></i></a>
+                    <a href="https://www.linkedin.com/in/areeba-majeed-9283aa28a/" class="social-link"
+                        target="_blank"><i class="ph ph-linkedin-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Areeba Majeed. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("yCs4H9ht9oQI3tJlm");
+        })();
+    </script>
+    <script type="text/javascript">
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+
+            emailjs.sendForm("service_gc39ve3", "template_q5g1uko", this)
+                .then(function () {
+                    alert("Message sent successfully!");
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    document.getElementById("contactForm").reset();
+                }, function (error) {
+                    alert("Failed to send message. Please try again later.");
+                    console.error("EmailJS Error:", error);
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+</body>
+
+</html>
