@@ -159,19 +159,19 @@ window.addEventListener('scroll', () => {
         navbar.style.boxShadow = 'none';
     }
 
-    // Active Link
+    // Active Link Scroll Highlight
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (window.scrollY >= (sectionTop - 200)) {
             current = section.getAttribute('id');
         }
     });
 
     navLinks.forEach(link => {
+        const href = link.getAttribute('href');
         link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
+        if (current && (href === `#${current}` || href === `index.html#${current}`)) {
             link.classList.add('active');
         }
     });
