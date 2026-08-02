@@ -10,6 +10,32 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+const path = require('path');
+
+// Serve static assets from folders
+app.use(express.static(__dirname));
+app.use('/pages', express.static(path.join(__dirname, 'pages')));
+app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+
+// Production / Clean Route Aliases for Pages
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'contact.html'));
+});
+
+app.get('/resume', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'resume.html'));
+});
+
+app.get('/contact.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'contact.html'));
+});
+
+app.get('/resume.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'resume.html'));
+});
+
 // Transporter Configuration using Gmail App Password
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -67,6 +93,11 @@ app.post('/api/send-email', async (req, res) => {
         console.error('Error sending email via Nodemailer:', error);
         return res.status(500).json({ success: false, error: error.message || 'Failed to send email' });
     }
+});
+
+// Wildcard catch-all fallback to index.html
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
