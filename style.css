@@ -309,6 +309,18 @@
       color: var(--text-primary);
   }
 
+  [data-theme="dark"] .section-title {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.3));
+  }
+
+  [data-theme="dark"] .section-subtitle {
+      color: #38bdf8;
+      text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+  }
+
   [data-theme="dark"] .project-title,
   [data-theme="dark"] .edu-title,
   [data-theme="dark"] .deep-dive-title,
@@ -316,8 +328,10 @@
   [data-theme="dark"] .resume-block-header h3,
   [data-theme="dark"] .resume-item-title,
   [data-theme="dark"] .info-content h5,
-  [data-theme="dark"] .form-label {
-      color: #f8fafc;
+  [data-theme="dark"] .form-label,
+  [data-theme="dark"] .skill-name,
+  [data-theme="dark"] .hero-typewriter {
+      color: #ffffff !important;
   }
 
   [data-theme="dark"] .project-desc,
@@ -325,8 +339,11 @@
   [data-theme="dark"] .deep-dive-desc,
   [data-theme="dark"] .resume-summary-text,
   [data-theme="dark"] .resume-item-desc,
-  [data-theme="dark"] .info-content p {
-      color: #94a3b8;
+  [data-theme="dark"] .info-content p,
+  [data-theme="dark"] .about-lead,
+  [data-theme="dark"] .about-desc,
+  [data-theme="dark"] p {
+      color: #cbd5e1 !important;
   }
 
   [data-theme="dark"] .project-thumb {
@@ -405,6 +422,16 @@
       position: relative;
       padding-top: 80px;
       overflow: hidden;
+  }
+
+  #particleCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
   }
 
   .hero-bg {
