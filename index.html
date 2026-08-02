@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -22,8 +22,8 @@
 
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="#" class="logo">Areeba Majeed/</a>
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">&lt;Areeba/&gt;</a>
             <div class="menu-toggle" id="mobile-menu">
                 <i class="ph ph-list"></i>
             </div>
@@ -31,32 +31,42 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experience" class="nav-link">Education</a>
+                <a href="resume.html" class="nav-link">Resume</a>
                 <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+                    <span class="theme-toggle-slider">
+                        <i class="ph ph-moon theme-icon-dark"></i>
+                        <i class="ph ph-sun theme-icon-light"></i>
+                    </span>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <canvas id="particleCanvas"></canvas>
         <div class="hero-bg">
             <div class="hero-orb orb-1"></div>
             <div class="hero-orb orb-2"></div>
         </div>
         <div class="container">
             <div class="hero-content">
+                <span class="hero-welcome">WELCOME TO MY PORTFOLIO</span>
                 <h1 class="hero-title">Areeba Majeed</h1>
                 <div class="hero-typewriter">
                     <span id="typewriter-text"></span><span class="cursor"></span>
                 </div>
-                <p class="hero-tagline">I craft interfaces that are fast, beautiful, and human.</p>
+                <p class="hero-tagline">I specialize in <span>Full-Stack Web Development</span></p>
 
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">
                         <i class="ph ph-briefcase"></i> View My Work
                     </a>
-                    <a href="cv.html" class="btn btn-outline">
-                        <i class="ph ph-download-simple"></i> Download CV
+                    <a href="Areeba_Majeed_Resume.pdf" target="_blank" class="btn btn-outline">
+                        <i class="ph ph-download-simple"></i> Download Resume
                     </a>
                 </div>
 
@@ -81,7 +91,7 @@
             <div class="about-grid">
                 <div class="about-image fade-up">
                     <div class="about-avatar">
-                        <i class="ph ph-code"></i>
+                        <img src="my-profile.png" alt="Areeba Majeed Profile Picture" class="profile-img">
                     </div>
                 </div>
                 <div class="about-content fade-up" style="transition-delay: 0.2s">
@@ -105,7 +115,7 @@
                         </div>
                     </div>
                     <div style="margin-top: 10px;">
-                        <a href="cv.html" class="btn btn-primary"><i class="ph ph-file-pdf"></i> Download Resume</a>
+                        <a href="Areeba_Majeed_Resume.pdf" target="_blank" class="btn btn-primary"><i class="ph ph-file-pdf"></i> Download Resume</a>
                     </div>
                 </div>
             </div>
@@ -203,128 +213,64 @@
             </div>
 
             <div class="projects-grid">
-                <!-- Project 1 -->
+                <!-- Project 1: HrConnect -->
                 <div class="project-card fade-up">
-                    <div class="project-thumb"><i class="ph ph-calendar-check"></i></div>
+                    <div class="project-thumb"><i class="ph ph-users"></i></div>
                     <div class="project-content">
-                        <h3 class="project-title">Event Manager App</h3>
-                        <p class="project-desc">A responsive event management platform to create, edit, and track
-                            events.</p>
+                        <h3 class="project-title">HrConnect – Job Portal</h3>
+                        <p class="project-desc">Developed a full-stack job portal connecting recruiters and job seekers. Features secure authentication, role-based access control, job management, and responsive candidate application workflows.</p>
                         <div class="project-tags">
-                            <span class="project-tag">ReactJS</span>
+                            <span class="project-tag">MongoDB</span>
+                            <span class="project-tag">Express.js</span>
+                            <span class="project-tag">React.js</span>
+                            <span class="project-tag">Node.js</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://managedailytasks.netlify.app/" target="_blank" class="project-link"><i
-                                    class="ph ph-arrow-square-out"></i> Live Demo</a>
-
+                            <a href="https://github.com/mirza1272/Multi-Branch-Recruitment-and-Applicant-Tracking-System.git" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 2: Football Live Scoreboard -->
                 <div class="project-card fade-up" style="transition-delay: 0.1s">
-                    <div class="project-thumb"><i class="ph ph-browsers"></i></div>
+                    <div class="project-thumb"><i class="ph ph-soccer-ball"></i></div>
                     <div class="project-content">
-                        <h3 class="project-title">Portfolio Website</h3>
-                        <p class="project-desc">Designed and built a modern, responsive personal portfolio showcasing
-                            projects and skills.</p>
+                        <h3 class="project-title">Football Live Scoreboard</h3>
+                        <p class="project-desc">Built a real-time live scoreboard displaying match scores, fixtures, and competition details. Integrated third-party football APIs with backend caching and scheduled updates for optimized performance.</p>
                         <div class="project-tags">
-                            <span class="project-tag">ReactJS</span>
+                            <span class="project-tag">React.js</span>
+                            <span class="project-tag">Express.js</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">REST APIs</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://areebamajeed-portfolio.netlify.app/" target="_blank"
-                                class="project-link"><i class="ph ph-arrow-square-out"></i> Live Demo</a>
-
+                            <a href="https://github.com/areeba-majeed/Football-Live-Scoreboard.git" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
-
-
-                <!-- Project 4 -->
-                <div class="project-card fade-up" style="transition-delay: 0.3s">
-                    <div class="project-thumb"><i class="ph ph-student"></i></div>
+                <!-- Project 3: FormFlow -->
+                <div class="project-card fade-up" style="transition-delay: 0.2s">
+                    <div class="project-thumb"><i class="ph ph-note-pencil"></i></div>
                     <div class="project-content">
-                        <h3 class="project-title">Student Portal</h3>
-                        <p class="project-desc">A portal for students to register and view details using pure JavaScript
-                            logic.</p>
+                        <h3 class="project-title">FormFlow – AI Form Builder</h3>
+                        <p class="project-desc">Developed a dynamic form builder allowing users to create, publish, and manage customizable forms with multiple field types, public form sharing, response analytics dashboard, and Cloudinary file uploads.</p>
                         <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Next.js</span>
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">MongoDB</span>
+                            <span class="project-tag">Cloudinary</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://manage-studentsrecords.netlify.app/" target="_blank"
-                                class="project-link"><i class="ph ph-arrow-square-out"></i> Live Demo</a>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card fade-up" style="transition-delay: 0.4s">
-                    <div class="project-thumb"><i class="ph ph-currency-circle-dollar"></i></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Currency Converter</h3>
-                        <p class="project-desc">A real-time currency conversion tool using exchange rate APIs.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">APIs</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://coin-convertor.netlify.app" target="_blank" class="project-link"><i
-                                    class="ph ph-arrow-square-out"></i> Live Demo</a>
-
+                            <a href="https://github.com/areeba-majeed/Form-Flow.git" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Education & Certifications -->
-    <section class="section" style="background-color: var(--bg-surface-1);" id="experience">
-        <div class="container">
-            <div class="section-header fade-up">
-                <span class="section-subtitle">Academics</span>
-                <h2 class="section-title">Education & Certifications</h2>
-            </div>
 
-            <div class="edu-grid">
-                <!-- Education -->
-                <div class="edu-card fade-up">
-                    <h3 class="edu-title">BS Computer Science</h3>
-                    <div class="edu-inst">FAST NUCES</div>
-                    <div class="edu-meta">
-                        <span>Present, Expected 2027</span>
-                    </div>
-                </div>
-
-                <div class="edu-card fade-up" style="transition-delay: 0.1s">
-                    <h3 class="edu-title">FSc Engineering</h3>
-                    <div class="edu-inst">Pre-Engineering</div>
-                    <div class="edu-meta">
-                        <span>Completed 2023</span>
-                    </div>
-                </div>
-
-
-                <!-- Certifications -->
-                <div class="edu-card fade-up">
-                    <h3 class="edu-title">Python for Everybody</h3>
-                    <div class="edu-inst">University of Michigan (Coursera)</div>
-                    <div class="edu-meta">
-                        <span>Completed 2025</span>
-                    </div>
-                </div>
-
-                <div class="edu-card fade-up" style="transition-delay: 0.1s">
-                    <h3 class="edu-title">Advanced React</h3>
-                    <div class="edu-inst">Meta (Coursera)</div>
-                    <div class="edu-meta">
-                        <span>Completed 2025</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section class="section" id="contact">
@@ -397,7 +343,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Areeba Majeed/</div>
+                <div class="footer-logo">&lt;Areeba/&gt;</div>
                 <div class="footer-nav">
 
                     <a href="#about">About</a>

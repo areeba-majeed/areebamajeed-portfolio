@@ -31,8 +31,37 @@ function type() {
     setTimeout(type, typeSpeed);
 }
 
-// Initialize Typewriter
+// Theme Toggle Logic
+function initThemeToggle() {
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+
+    // Apply initial saved theme (defaults to dark as requested)
+    if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+    }
+
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('portfolio-theme', 'light');
+                navbar.style.background = 'rgba(240, 245, 255, 0.85)';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('portfolio-theme', 'dark');
+                navbar.style.background = 'rgba(6, 9, 19, 0.85)';
+            }
+        });
+    }
+}
+
+// Initialize
 document.addEventListener("DOMContentLoaded", () => {
+    initThemeToggle();
     if (typeElement) setTimeout(type, 1000);
     generateGithubGraph();
 });
@@ -121,11 +150,12 @@ navLinks.forEach(link => {
 
 window.addEventListener('scroll', () => {
     // Navbar blur background
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+        navbar.style.background = isDark ? 'rgba(6, 9, 19, 0.95)' : 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = isDark ? '0 10px 30px -10px rgba(0, 0, 0, 0.6)' : '0 10px 30px -10px rgba(99, 102, 241, 0.12)';
     } else {
-        navbar.style.background = 'rgba(15, 23, 42, 0.8)';
+        navbar.style.background = isDark ? 'rgba(6, 9, 19, 0.85)' : 'rgba(240, 245, 255, 0.85)';
         navbar.style.boxShadow = 'none';
     }
 
@@ -147,26 +177,63 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// 5. Generate Mock GitHub Graph
-function generateGithubGraph() {
-    const graphContainer = document.getElementById('gh-graph');
-    if (!graphContainer) return;
 
-    const totalBlocks = 150; // Approximating a few months of blocks
-    for (let i = 0; i < totalBlocks; i++) {
-        const block = document.createElement('div');
-        block.className = 'gh-block';
+// 6. Floating Dots Particle Background Canvas (Antigravity Light Dots effect)
+function initParticleCanvas() {
+    const canvas = document.getElementById('particleCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
 
-        // Randomly assign a level
-        const rand = Math.random();
-        if (rand > 0.9) block.classList.add('l4');
-        else if (rand > 0.8) block.classList.add('l3');
-        else if (rand > 0.6) block.classList.add('l2');
-        else if (rand > 0.4) block.classList.add('l1');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
 
-        graphContainer.appendChild(block);
+    window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    const particles = [];
+    const numParticles = Math.min(Math.floor(window.innerWidth / 8), 160);
+
+    for (let i = 0; i < numParticles; i++) {
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: Math.random() * 2.5 + 1,
+            color: Math.random() > 0.3 ? 'rgba(79, 70, 229, 0.45)' : 'rgba(124, 58, 237, 0.55)',
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4
+        });
     }
+
+    function render() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0) p.x = width;
+            if (p.x > width) p.x = 0;
+            if (p.y < 0) p.y = height;
+            if (p.y > height) p.y = 0;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.fill();
+        }
+        requestAnimationFrame(render);
+    }
+
+    render();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    initParticleCanvas();
+});
+
 
 
 
