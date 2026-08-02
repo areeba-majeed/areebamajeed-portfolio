@@ -296,11 +296,13 @@
                         <div class="form-group">
                             <label class="form-label">Name</label>
                             <input type="text" name="from_name" class="form-control" placeholder="Your Name" required>
+                            <input type="hidden" name="name" id="hidden_name">
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Email</label>
                             <input type="email" name="reply_to" class="form-control" placeholder="your.email@example.com" required>
+                            <input type="hidden" name="email" id="hidden_email">
                         </div>
 
                         <div class="form-group">
@@ -381,6 +383,12 @@
         document.getElementById("contactForm").addEventListener("submit", function (e) {
             e.preventDefault();
 
+            // Sync fallback fields for template compatibility
+            const fromNameInput = this.querySelector('input[name="from_name"]');
+            const replyToInput = this.querySelector('input[name="reply_to"]');
+            document.getElementById('hidden_name').value = fromNameInput ? fromNameInput.value : '';
+            document.getElementById('hidden_email').value = replyToInput ? replyToInput.value : '';
+
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = 'Sending...';
@@ -393,7 +401,8 @@
                     submitBtn.disabled = false;
                     document.getElementById("contactForm").reset();
                 }, function (error) {
-                    alert("Failed to send message. Please try again later.");
+                    const errDetail = error && error.text ? error.text : JSON.stringify(error);
+                    alert("Failed to send message: " + errDetail);
                     console.error("EmailJS Error:", error);
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
