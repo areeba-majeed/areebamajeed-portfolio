@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Areeba Majeed</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <!-- Global Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">&lt;Areeba/&gt;</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="ph ph-list"></i>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+                    <span class="theme-toggle-slider">
+                        <i class="ph ph-moon theme-icon-dark"></i>
+                        <i class="ph ph-sun theme-icon-light"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="section" style="padding-top: 140px; padding-bottom: 40px;">
+        <div class="container text-center">
+            <div class="section-header fade-up">
+                <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4rem);">Let's Connect</h1>
+                <p style="color: var(--text-muted); max-width: 650px; margin: 16px auto 0 auto; font-size: 1.1rem;">
+                    Great ideas start with a conversation - I'm always excited to connect, collaborate, and create something impactful together.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Details & Form Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Left Sidebar Details -->
+                <div class="contact-info fade-up" style="transition-delay: 0.1s">
+                    <div class="contact-card-box">
+                        <h4 class="contact-box-title">Open to Opportunities</h4>
+                        <p class="contact-box-desc">
+                            I am actively seeking internship roles, freelance projects, and collaborative opportunities in Full-Stack Web Development (MERN / Next.js). I am eager to contribute to impactful projects and grow through real-world experience.
+                        </p>
+                    </div>
+
+                    <a href="https://github.com/areeba-majeed" target="_blank" class="info-card">
+                        <div class="info-icon"><i class="ph ph-github-logo"></i></div>
+                        <div class="info-content">
+                            <span class="info-sub">GitHub</span>
+                            <h5>Check my GitHub</h5>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/areeba-majeed-9283aa28a/" target="_blank" class="info-card">
+                        <div class="info-icon"><i class="ph ph-linkedin-logo"></i></div>
+                        <div class="info-content">
+                            <span class="info-sub">LinkedIn</span>
+                            <h5>Areeba Majeed</h5>
+                        </div>
+                    </a>
+
+                    <a href="mailto:areebamajeed212@gmail.com" target="_blank" class="info-card">
+                        <div class="info-icon"><i class="ph ph-envelope-simple"></i></div>
+                        <div class="info-content">
+                            <span class="info-sub">Location</span>
+                            <h5>Pakistan</h5>
+                        </div>
+                    </a>
+
+                    <div class="info-card">
+                        <div class="info-icon"><i class="ph ph-circle-wavy-check"></i></div>
+                        <div class="info-content">
+                            <span class="info-sub">Availability</span>
+                            <h5>Open to Work</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Contact Form -->
+                <div class="contact-form fade-up" style="transition-delay: 0.2s">
+                    <h3 class="form-title">Send a Message</h3>
+                    <p class="form-subtitle">Fill out the form below and I'll get back to you as soon as possible.</p>
+
+                    <form id="contactForm">
+                        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div class="form-group">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" name="from_name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" name="reply_to" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input type="text" name="subject" class="form-control" placeholder="Project Collaboration / Internship" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea name="message" class="form-control" rows="5" placeholder="Tell me about what's on your mind..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 100px; padding: 16px; margin-top: 8px;">
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">&lt;Areeba/&gt;</div>
+                <div class="footer-nav">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#projects">Projects</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/areeba-majeed" class="social-link" target="_blank"><i
+                            class="ph ph-github-logo"></i></a>
+                    <a href="https://www.linkedin.com/in/areeba-majeed-9283aa28a/" class="social-link"
+                        target="_blank"><i class="ph ph-linkedin-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Areeba Majeed. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'SENDING...';
+            submitBtn.disabled = true;
+
+            const formData = {
+                from_name: this.querySelector('input[name="from_name"]').value,
+                reply_to: this.querySelector('input[name="reply_to"]').value,
+                subject: this.querySelector('input[name="subject"]').value,
+                message: this.querySelector('textarea[name="message"]').value
+            };
+
+            const backendUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+                ? 'http://localhost:5000/api/send-email'
+                : '/api/send-email';
+
+            fetch(backendUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Message sent successfully!");
+                    document.getElementById("contactForm").reset();
+                } else {
+                    alert("Failed to send message: " + (data.error || "Server error"));
+                }
+            })
+            .catch(err => {
+                console.error("Nodemailer API error:", err);
+                alert("Failed to connect to email server. Make sure the Node server is running.");
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+</body>
+
+</html>

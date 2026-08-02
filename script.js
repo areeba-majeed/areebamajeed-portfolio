@@ -1,12 +1,19 @@
 
 // 1. Typewriter Effect
-const roles = ["Frontend Developer", "UI Designer", "React Specialist", "Problem Solver"];
+const roles = [
+    "Full Stack Engineer",
+    "Software Developer",
+    "MERN Stack Enthusiast",
+    "Next.js Learner",
+    "UI/UX Minded Creator"
+];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 const typeElement = document.getElementById("typewriter-text");
 
 function type() {
+    if (!typeElement) return;
     const currentRole = roles[roleIndex];
 
     if (isDeleting) {
@@ -17,15 +24,15 @@ function type() {
         charIndex++;
     }
 
-    let typeSpeed = isDeleting ? 50 : 100;
+    let typeSpeed = isDeleting ? 40 : 80;
 
     if (!isDeleting && charIndex === currentRole.length) {
-        typeSpeed = 2000; // Pause at end
+        typeSpeed = 2200; // Pause at end of word
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
-        typeSpeed = 500; // Pause before typing new word
+        typeSpeed = 400; // Pause before typing next word
     }
 
     setTimeout(type, typeSpeed);
@@ -193,21 +200,24 @@ function initParticleCanvas() {
     });
 
     const particles = [];
-    const numParticles = Math.min(Math.floor(window.innerWidth / 8), 160);
+    const numParticles = Math.min(Math.floor(window.innerWidth / 4), 280);
 
     for (let i = 0; i < numParticles; i++) {
+        const isCyan = Math.random() > 0.4;
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: Math.random() * 2.5 + 1,
-            color: Math.random() > 0.3 ? 'rgba(79, 70, 229, 0.45)' : 'rgba(124, 58, 237, 0.55)',
-            vx: (Math.random() - 0.5) * 0.4,
-            vy: (Math.random() - 0.5) * 0.4
+            radius: Math.random() * 2.2 + 0.8,
+            color: isCyan ? 'rgba(56, 189, 248, 0.75)' : 'rgba(168, 85, 247, 0.65)',
+            vx: (Math.random() - 0.5) * 0.6,
+            vy: (Math.random() - 0.5) * 0.6
         });
     }
 
     function render() {
         ctx.clearRect(0, 0, width, height);
+
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
 
         for (let i = 0; i < particles.length; i++) {
             const p = particles[i];
@@ -221,7 +231,7 @@ function initParticleCanvas() {
 
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = p.color;
+            ctx.fillStyle = isDark ? p.color : (i % 2 === 0 ? 'rgba(30, 27, 75, 0.7)' : 'rgba(79, 70, 229, 0.75)');
             ctx.fill();
         }
         requestAnimationFrame(render);

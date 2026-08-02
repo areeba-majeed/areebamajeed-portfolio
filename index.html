@@ -30,11 +30,12 @@
                 <i class="ph ph-list"></i>
             </div>
             <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="resume.html" class="nav-link">Resume</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
             <div class="nav-actions">
                 <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
@@ -56,7 +57,7 @@
         <div class="container">
             <div class="hero-content">
                 <span class="hero-welcome">WELCOME TO MY PORTFOLIO</span>
-                <h1 class="hero-title">Areeba Majeed</h1>
+                <h1 class="hero-title reveal-name">Areeba Majeed</h1>
                 <div class="hero-typewriter">
                     <span id="typewriter-text"></span><span class="cursor"></span>
                 </div>
@@ -66,17 +67,9 @@
                     <a href="#projects" class="btn btn-primary">
                         <i class="ph ph-briefcase"></i> View My Work
                     </a>
-                    <a href="#contact" class="btn btn-outline">
+                    <a href="contact.html" class="btn btn-outline">
                         <i class="ph ph-envelope-simple"></i> Get In Touch
                     </a>
-                </div>
-
-                <div class="hero-socials">
-                    <a href="https://github.com/areeba-majeed/" class="social-link" aria-label="GitHub"><i
-                            class="ph ph-github-logo"></i></a>
-                    <a href="https://www.linkedin.com/in/areeba-majeed-9283aa28a/" class="social-link"
-                        aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
-
                 </div>
             </div>
         </div>
@@ -109,7 +102,7 @@
 
                     <div class="about-badges">
                         <div class="badge">
-                            <i class="ph ph-map-pin"></i> Pakistan — Open to Remote
+                            <i class="ph ph-map-pin"></i> Pakistan - Open to Remote
                         </div>
                         <div class="badge">
                             <div class="status-dot"></div> Available for Work
@@ -128,56 +121,93 @@
         <div class="container">
             <div class="section-header fade-up">
                 <span class="section-subtitle">What I build with</span>
-                <h2 class="section-title">Skills & Technologies</h2>
+                <h2 class="section-title">Skills & Tech Stack</h2>
             </div>
 
-            <div class="skills-container">
-                <!-- Tech Skills -->
-                <div class="skills-grid">
-                    <div class="skill-card fade-up">
-                        <i class="ph ph-file-html skill-icon"></i>
-                        <div class="skill-name">HTML5</div>
-                        <div class="skill-level">Expert</div>
+            <div class="skills-grouped-container">
+                <!-- Group 1: Frontend Tech Stack -->
+                <div class="skill-group-block fade-up">
+                    <h3 class="skill-group-title"><i class="ph ph-layout"></i> Frontend Tech Stack</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="ph ph-atom skill-icon"></i>
+                            <div class="skill-name">React.js</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="ph ph-lightning skill-icon"></i>
+                            <div class="skill-name">Next.js</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="ph ph-file-js skill-icon"></i>
+                            <div class="skill-name">JavaScript (ES6+)</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="ph ph-wind skill-icon"></i>
+                            <div class="skill-name">Tailwind CSS</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="ph ph-file-html skill-icon"></i>
+                            <div class="skill-name">HTML5</div>
+                            <div class="skill-level">Expert</div>
+                        </div>
                     </div>
-                    <div class="skill-card fade-up" style="transition-delay: 0.1s">
-                        <i class="ph ph-file-css skill-icon"></i>
-                        <div class="skill-name">CSS3</div>
-                        <div class="skill-level">Expert</div>
+                </div>
+
+                <!-- Group 2: Backend & Database -->
+                <div class="skill-group-block fade-up" style="transition-delay: 0.15s">
+                    <h3 class="skill-group-title"><i class="ph ph-database"></i> Backend & Database</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="ph ph-node-logo skill-icon"></i>
+                            <div class="skill-name">Node.js</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="ph ph-cpu skill-icon"></i>
+                            <div class="skill-name">Express.js</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="ph ph-database skill-icon"></i>
+                            <div class="skill-name">MongoDB & Mongoose</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="ph ph-paper-plane-tilt skill-icon"></i>
+                            <div class="skill-name">REST APIs</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
                     </div>
-                    <div class="skill-card fade-up" style="transition-delay: 0.2s">
-                        <i class="ph ph-file-js skill-icon"></i>
-                        <div class="skill-name">JavaScript</div>
-                        <div class="skill-level">Proficient</div>
-                    </div>
-                    <div class="skill-card fade-up" style="transition-delay: 0.3s">
-                        <i class="ph ph-atom skill-icon"></i>
-                        <div class="skill-name">React.js</div>
-                        <div class="skill-level">Proficient</div>
-                    </div>
-                    <div class="skill-card fade-up" style="transition-delay: 0.4s">
-                        <i class="ph ph-node-logo skill-icon"></i>
-                        <div class="skill-name">Node.js</div>
-                        <div class="skill-level">Proficient</div>
-                    </div>
-                    <div class="skill-card fade-up" style="transition-delay: 0.45s">
-                        <i class="ph ph-database skill-icon"></i>
-                        <div class="skill-name">MongoDB</div>
-                        <div class="skill-level">Proficient</div>
-                    </div>
-                    <div class="skill-card fade-up" style="transition-delay: 0.5s">
-                        <i class="ph ph-envelope-simple-open skill-icon"></i>
-                        <div class="skill-name">EmailJS</div>
-                        <div class="skill-level">Proficient</div>
-                    </div>
-                    <div class="skill-card fade-up" style="transition-delay: 0.55s">
-                        <i class="ph ph-figma-logo skill-icon"></i>
-                        <div class="skill-name">Figma</div>
-                        <div class="skill-level">Proficient</div>
-                    </div>
-                    <div class="skill-card fade-up" style="transition-delay: 0.6s">
-                        <i class="ph ph-terminal-window skill-icon"></i>
-                        <div class="skill-name">C++</div>
-                        <div class="skill-level">Familiar</div>
+                </div>
+
+                <!-- Group 3: Tools, Utilities & Core Languages -->
+                <div class="skill-group-block fade-up" style="transition-delay: 0.3s">
+                    <h3 class="skill-group-title"><i class="ph ph-wrench"></i> Tools & Core Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="ph ph-git-branch skill-icon"></i>
+                            <div class="skill-name">Git & GitHub</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="ph ph-figma-logo skill-icon"></i>
+                            <div class="skill-name">Figma</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="ph ph-paper-plane-tilt skill-icon"></i>
+                            <div class="skill-name">Nodemailer / EmailJS</div>
+                            <div class="skill-level">Proficient</div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="ph ph-terminal-window skill-icon"></i>
+                            <div class="skill-name">C++</div>
+                            <div class="skill-level">Familiar</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -228,7 +258,7 @@
                 <div class="project-card fade-up">
                     <div class="project-thumb"><i class="ph ph-users"></i></div>
                     <div class="project-content">
-                        <h3 class="project-title">HrConnect – Job Portal</h3>
+                        <h3 class="project-title">HrConnect - Job Portal</h3>
                         <p class="project-desc">Developed a full-stack job portal connecting recruiters and job seekers. Features secure authentication, role-based access control, job management, and responsive candidate application workflows.</p>
                         <div class="project-tags">
                             <span class="project-tag">MongoDB</span>
@@ -264,7 +294,7 @@
                 <div class="project-card fade-up" style="transition-delay: 0.2s">
                     <div class="project-thumb"><i class="ph ph-note-pencil"></i></div>
                     <div class="project-content">
-                        <h3 class="project-title">FormFlow – AI Form Builder</h3>
+                        <h3 class="project-title">FormFlow - AI Form Builder</h3>
                         <p class="project-desc">Developed a dynamic form builder allowing users to create, publish, and manage customizable forms with multiple field types, public form sharing, response analytics dashboard, and Cloudinary file uploads.</p>
                         <div class="project-tags">
                             <span class="project-tag">Next.js</span>
@@ -283,66 +313,17 @@
     </section>
 
 
-    <!-- Contact Section -->
+    <!-- Ready to Collaborate Section (Replaces inline contact section on index.html) -->
     <section class="section" id="contact">
         <div class="container">
-            <div class="section-header fade-up">
-                <span class="section-subtitle">Get In Touch</span>
-                <h2 class="section-title">Let's Build Something Great</h2>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-form fade-up">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label class="form-label">Name</label>
-                            <input type="text" name="from_name" class="form-control" placeholder="Your Name" required>
-                            <input type="hidden" name="name" id="hidden_name">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Email</label>
-                            <input type="email" name="reply_to" class="form-control" placeholder="your.email@example.com" required>
-                            <input type="hidden" name="email" id="hidden_email">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Subject</label>
-                            <input type="text" name="subject" class="form-control" placeholder="Project Inquiry" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Message</label>
-                            <textarea name="message" class="form-control" placeholder="Hello, I'd like to talk about..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
-                            <i class="ph ph-paper-plane-tilt"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-
-                <div class="contact-info fade-up" style="transition-delay: 0.2s">
-                    <a href="mailto:areebamajeed212@gmail.com" target="_blank" class="info-card">
-                        <div class="info-icon"><i class="ph ph-envelope-simple"></i></div>
-                        <div class="info-content">
-                            <h5>Email</h5>
-                            <p>areebamajeed212@gmail.com</p>
-                        </div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/areeba-majeed-9283aa28a/" target="_blank" class="info-card">
-                        <div class="info-icon"><i class="ph ph-linkedin-logo"></i></div>
-                        <div class="info-content">
-                            <h5>LinkedIn</h5>
-                            <p>areeba-majeed</p>
-                        </div>
-                    </a>
-                    <a href="https://github.com/areeba-majeed" target="_blank" class="info-card">
-                        <div class="info-icon"><i class="ph ph-github-logo"></i></div>
-                        <div class="info-content">
-                            <h5>GitHub</h5>
-                            <p>areeba-majeed</p>
-                        </div>
+            <div class="collab-box fade-up">
+                <h2 class="collab-title">Ready to Collaborate?</h2>
+                <p class="collab-desc">
+                    I'm currently open to internships, freelance projects, and Full-time opportunities. Let's connect and build something extraordinary.
+                </p>
+                <div style="margin-top: 32px;">
+                    <a href="contact.html" class="btn btn-collab">
+                        START A CONVERSATION
                     </a>
                 </div>
             </div>
@@ -355,12 +336,10 @@
             <div class="footer-content">
                 <div class="footer-logo">&lt;Areeba/&gt;</div>
                 <div class="footer-nav">
-
                     <a href="#about">About</a>
-
                     <a href="#projects">Projects</a>
-                    <a href="#experience">Education</a>
-                    <a href="#contact">Contact</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="hero-socials">
                     <a href="https://github.com/areeba-majeed" class="social-link" target="_blank"><i
@@ -374,53 +353,6 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript">
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = 'Sending...';
-            submitBtn.disabled = true;
-
-            const formData = {
-                from_name: this.querySelector('input[name="from_name"]').value,
-                reply_to: this.querySelector('input[name="reply_to"]').value,
-                subject: this.querySelector('input[name="subject"]').value,
-                message: this.querySelector('textarea[name="message"]').value
-            };
-
-            // Call Node.js Nodemailer API backend
-            const backendUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-                ? 'http://localhost:5000/api/send-email'
-                : '/api/send-email';
-
-            fetch(backendUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(res => res.json())
-            .then(data => {
-                if (data.success) {
-                    alert("Message sent successfully!");
-                    document.getElementById("contactForm").reset();
-                } else {
-                    alert("Failed to send message: " + (data.error || "Server error"));
-                }
-            })
-            .catch(err => {
-                console.error("Nodemailer API error:", err);
-                alert("Failed to connect to email server. Make sure the Node server is running.");
-            })
-            .finally(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            });
-        });
-    </script>
 </body>
 
 </html>
