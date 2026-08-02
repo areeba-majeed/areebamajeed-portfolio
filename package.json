@@ -1,0 +1,28 @@
+{
+  "name": "areebamajeed-portfolio",
+  "version": "1.0.0",
+  "description": "Areeba Majeed Portfolio - Full Stack React + Node.js Application",
+  "main": "server.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13",
+    "phosphor-react": "^1.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "nodemon": "^3.1.2",
+    "vite": "^5.2.11"
+  }
+}

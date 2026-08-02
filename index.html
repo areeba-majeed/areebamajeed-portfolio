@@ -373,40 +373,51 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("yCs4H9ht9oQI3tJlm");
-        })();
-    </script>
     <script type="text/javascript">
         document.getElementById("contactForm").addEventListener("submit", function (e) {
             e.preventDefault();
-
-            // Sync fallback fields for template compatibility
-            const fromNameInput = this.querySelector('input[name="from_name"]');
-            const replyToInput = this.querySelector('input[name="reply_to"]');
-            document.getElementById('hidden_name').value = fromNameInput ? fromNameInput.value : '';
-            document.getElementById('hidden_email').value = replyToInput ? replyToInput.value : '';
 
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = 'Sending...';
             submitBtn.disabled = true;
 
-            emailjs.sendForm("service_gc39ve3", "template_q5g1uko", this)
-                .then(function () {
+            const formData = {
+                from_name: this.querySelector('input[name="from_name"]').value,
+                reply_to: this.querySelector('input[name="reply_to"]').value,
+                subject: this.querySelector('input[name="subject"]').value,
+                message: this.querySelector('textarea[name="message"]').value
+            };
+
+            // Call Node.js Nodemailer API backend
+            const backendUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+                ? 'http://localhost:5000/api/send-email'
+                : '/api/send-email';
+
+            fetch(backendUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
                     alert("Message sent successfully!");
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
                     document.getElementById("contactForm").reset();
-                }, function (error) {
-                    const errDetail = error && error.text ? error.text : JSON.stringify(error);
-                    alert("Failed to send message: " + errDetail);
-                    console.error("EmailJS Error:", error);
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                });
+                } else {
+                    alert("Failed to send message: " + (data.error || "Server error"));
+                }
+            })
+            .catch(err => {
+                console.error("Nodemailer API error:", err);
+                alert("Failed to connect to email server. Make sure the Node server is running.");
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
         });
     </script>
 </body>
