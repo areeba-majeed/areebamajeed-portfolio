@@ -2,8 +2,6 @@
 
 <div align="center">
 
-  ![Areeba Majeed Portfolio](my-profile.png)
-
   ### **Full Stack Web Developer & Computer Science Undergraduate**
   *Building scalable, pixel-perfect, and modern web experiences.*
 
@@ -12,7 +10,7 @@
   [![Express.js](https://img.shields.io/badge/Server-Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
   [![License](https://img.shields.io/badge/License-MIT-blue.style=for-the-badge)](LICENSE)
 
-  [**Live Portfolio**](#) • [**Download Resume**](public/Areeba_Majeed_Resume.pdf) • [**Contact Me**](contact.html)
+  [**Live Portfolio**](https://areebamajeed-portfolio.vercel.app/) • [**Download Resume**](public/Areeba_Majeed_Resume.pdf) • [**Contact Me**](https://areebamajeed-portfolio.vercel.app/contact)
 
 </div>
 
