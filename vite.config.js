@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         contact: resolve(__dirname, 'contact.html'),
         resume: resolve(__dirname, 'resume.html'),
+        cv: resolve(__dirname, 'cv.html'),
       },
     },
   },
