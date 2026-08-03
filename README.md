@@ -8,7 +8,7 @@
   [![Vite](https://img.shields.io/badge/Built%20With-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
   [![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
   [![Express.js](https://img.shields.io/badge/Server-Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
-  [![License](https://img.shields.io/badge/License-MIT-blue.style=for-the-badge)](LICENSE)
+  
 
   [**Live Portfolio**](https://areebamajeed-portfolio.vercel.app/) • [**Download Resume**](public/Areeba_Majeed_Resume.pdf) • [**Contact Me**](https://areebamajeed-portfolio.vercel.app/contact)
 
